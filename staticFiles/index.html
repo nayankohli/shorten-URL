@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinyURL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">TINYURL</h1>
+        <div class="input-container">
+            <input type="text" name="url" id="url" placeholder="Enter your long URL" required>
+            <button class="short-btn" onclick="shortUrl()">Shorten</button>
+        </div>
+        <div class="result-container">
+            <h2>Your short link:</h2>
+            <h3 id="shortedURL" class="shorted-url"></h3>
+        </div>
+    </div>
+</body>
+
+<script src="./index.js"></script>
+</html>

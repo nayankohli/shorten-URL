@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5); /* Gradient background */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #343a40;
+}
+
+.container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #007bff;
+    border-radius: 30px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+}
+
+.short-btn {
+    padding: 12px 25px;
+    margin-left: 10px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.short-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.short-btn:active {
+    transform: scale(0.95);
+}
+
+.result-container {
+    margin-top: 20px;
+    padding: 25px;
+    border: 2px dashed #6c757d;
+    border-radius: 20px;
+    background: #f8f9fa;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.result-container:hover {
+    border-color: #007bff;
+}
+
+.shorted-url {
+    font-size: 1.5rem;
+    color: #28a745;
+    text-decoration: underline;
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    word-break: break-all;
+}
+
+.shorted-url:hover {
+    color: #155724;
+    transform: scale(1.1);
+}
+
+/* Shake effect for invalid input */
+input.shake {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
